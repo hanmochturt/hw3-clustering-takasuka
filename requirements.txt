@@ -1,7 +1,6 @@
 pytest
 numpy
 pathlib
-sys
 scipy
 sklearn
 typing
