@@ -1,4 +1,9 @@
 pytest
 numpy
+pathlib
+random
+sys
 scipy
+sklearn
+typing
 matplotlib
