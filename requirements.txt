@@ -1,7 +1,6 @@
 pytest
 numpy
 pathlib
-random
 sys
 scipy
 sklearn
