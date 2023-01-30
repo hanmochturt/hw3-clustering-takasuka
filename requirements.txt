@@ -3,5 +3,4 @@ numpy
 pathlib
 scipy
 scikit-learn
-typing
 matplotlib
