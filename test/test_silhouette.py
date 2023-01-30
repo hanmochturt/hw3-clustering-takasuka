@@ -25,15 +25,7 @@ def test_silhouette_score():
     num_decimals_my_score = len(str(my_score)) - 2
     num_decimals_sklearn_score = len(str(sklearn_score)) - 2
 
-    # account for small rounding errors
-    if num_decimals_my_score != num_decimals_sklearn_score:
-        if num_decimals_my_score < num_decimals_sklearn_score:
-            sklearn_score = round(sklearn_score, num_decimals_my_score - 1)
-            my_score = round(my_score, num_decimals_my_score - 1)
-        else:
-            my_score = round(my_score, num_decimals_sklearn_score - 1)
-            sklearn_score = round(sklearn_score, num_decimals_sklearn_score - 1)
-    assert my_score == sklearn_score
+    assert np.isclose(my_score, sklearn_score)
 
 
 def test_silhouette_low_cluster_error():
