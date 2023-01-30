@@ -22,9 +22,6 @@ def test_silhouette_score():
     pred = km.predict(clusters)
     my_score = np.mean(Silhouette().score(clusters, pred))
     sklearn_score = sklearn.metrics.silhouette_score(clusters, pred)
-    num_decimals_my_score = len(str(my_score)) - 2
-    num_decimals_sklearn_score = len(str(sklearn_score)) - 2
-
     assert np.isclose(my_score, sklearn_score)
 
 
